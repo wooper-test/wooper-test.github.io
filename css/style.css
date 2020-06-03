@@ -479,6 +479,9 @@ footer .container {
 
   body {
     background: url(../img/mv_sp.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 
   header {
@@ -581,11 +584,7 @@ footer .container {
     width: 100%;
   }
 
-  input {
-    width: 50%;
-  }
-
-  .email {
+  input, .email {
     width: 100%;
   }
 
