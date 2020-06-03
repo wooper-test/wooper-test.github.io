@@ -581,4 +581,13 @@ footer .container {
     width: 100%;
   }
 
+  input {
+    width: 50%;
+  }
+
+  .email {
+    width: 100%;
+  }
+
+
 }
