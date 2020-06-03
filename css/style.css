@@ -479,9 +479,6 @@ footer .container {
 
   body {
     background: url(../img/mv_sp.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
   }
 
   header {
@@ -489,9 +486,7 @@ footer .container {
     width: 100%;
     max-width: 100%;
     display: block;
-    position: fixed;
     left: 0;
-    top: 0;
     z-index: 9999;
   }
 
@@ -514,7 +509,7 @@ footer .container {
   }
 
   #news, #music, #live, #about, #contact, footer {
-    width: 100%;
+    width: 100vw;
   }
 
 }
