@@ -188,6 +188,27 @@ header {
   padding-bottom: 45px;
 }
 
+.gnavMenuList a {
+  position: relative;
+}
+
+.gnavMenuList a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #ae4950;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.gnavMenuList a:hover::after {
+  transform: scale(1, 1);
+}
+
 .gnavSNS {
   display: flex;
   font-size: 40px;
@@ -197,7 +218,7 @@ header {
   padding-right: 15px;
 }
 
-#news, #music, #live, #about, #contact, footer {
+main {
   background-color: rgba(255, 235, 204, 0.8);
   width: 70vw;
 }
@@ -250,7 +271,7 @@ h2::before {
 /*スクロールバーの色・角丸指定*/
 .newsBox::-webkit-scrollbar-thumb {
   border-radius: 10px;
-	background:#ae4950;
+	background: #ae4950;
 }
 
 .newsTitleList {
@@ -499,17 +520,105 @@ footer .container {
     z-index: 9999;
   }
 
+  .headerInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+
   .logo {
     width: 185px;
     padding-bottom: 0;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
   }
 
   .navToggle {
-    display: block;
+      display: block;
+      width: 1.75rem;
+      height: 1.5rem;
+      float: right;
+      position: relative;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+  }
+
+  .navToggle i {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #385076;
+      position: absolute;
+      transition: transform .5s, opacity .5s;
+  }
+
+  .navToggle i:nth-child(1) {
+      top: 0;
+  }
+
+  .navToggle i:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+  }
+
+  .navToggle i:nth-child(3) {
+      bottom: 0;
+  }
+
+  .navToggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  .navToggle.show i:nth-child(2) {
+      opacity: 0;
+  }
+
+  .navToggle.show i:nth-child(3) {
+      transform: translateY(-12px) rotate(45deg);
   }
 
   .gnav {
-    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    padding: 30px 7%;
+    height: 386px;
+    background: #385076
+  }
+
+  .gnav.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .gnav a, .gnav i {
+    color: #eee;
+  }
+
+  .gnavMenu {
+    font-size: 30px;
+  }
+
+  .gnavMenuList a::after {
+    background: #385076;
+  }
+
+
+  .gnavSNS {
+    font-size: 25px;
   }
 
   .container {
@@ -517,9 +626,16 @@ footer .container {
     padding: 80px 0;
   }
 
-  #news, #music, #live, #about, #contact, footer {
+  main {
+    margin-top: 730px;
     width: 100vw;
   }
+
+  #music, #live, #about, #contact {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
+
 
 }
 
@@ -533,6 +649,21 @@ footer .container {
   .logo {
     width: 120px;
     padding-bottom: 0;
+  }
+
+  .gnav {
+    top: 70px;
+    padding: 20px 7%;
+    height: 365px;
+  }
+
+  .gnavMenuList a {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  main {
+    margin-top: 450px;
   }
 
   .container {
