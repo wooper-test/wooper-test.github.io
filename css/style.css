@@ -231,6 +231,7 @@ main, footer {
   right: 50px;
   bottom: 50px;
   z-index: 9999;
+  overflow-y: auto;
 }
 
 #page_top a {
@@ -248,6 +249,7 @@ main, footer {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  -moz-opacity: 0.6,
   opacity: 0.6;
 }
 
