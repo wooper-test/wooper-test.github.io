@@ -229,6 +229,7 @@ main, footer {
   position: fixed;
   right: 50px;
   bottom: 50px;
+  z-index: 9999;
 }
 
 #page_top a {
@@ -327,6 +328,17 @@ h2::before {
 .musicList {
   max-width: 48%;
   margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.musicList iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .oldmusic {
