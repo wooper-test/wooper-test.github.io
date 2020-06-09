@@ -185,7 +185,7 @@ header {
 }
 
 .gnavMenuList {
-  padding-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .gnavMenuList a {
@@ -218,9 +218,35 @@ header {
   padding-right: 15px;
 }
 
-main {
+main, footer {
   background-color: rgba(255, 235, 204, 0.8);
   width: 70vw;
+}
+
+#page_top {
+  width: 88px;
+  height: 88px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+#page_top a {
+  content:  url('../img/TOP.png');
+  position: relative;
+  display: block;
+  width: 88px;
+  height: 88px;
+  text-decoration: none;
+}
+
+#page_top a:hover {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.6;
 }
 
 .container {
@@ -303,16 +329,18 @@ h2::before {
   margin-bottom: 50px;
 }
 
+.oldmusic {
+  display: none;
+}
+
 .more {
   text-align: right;
-}
-
-.more a {
   position: relative;
   padding-right: 28px;
+  cursor: pointer;
 }
 
-.more a::after {
+.more p::after {
   content: "";
   margin-left: 8px;
   position: absolute;
@@ -324,6 +352,10 @@ h2::before {
   border-style: solid;
   border-width: 13px 10px 0 10px;
   border-color: #ae4950 transparent transparent transparent;
+}
+
+.more.hidden {
+  display: none;
 }
 
 .liveBox {
@@ -540,37 +572,37 @@ footer .container {
   }
 
   .navToggle {
-      display: block;
-      width: 1.75rem;
-      height: 1.5rem;
-      float: right;
-      position: relative;
-      top: 50%;
-      right: 5%;
-      transform: translateY(-50%);
+    display: block;
+    width: 1.75rem;
+    height: 1.5rem;
+    float: right;
+    position: relative;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
   }
 
   .navToggle i {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #385076;
-      position: absolute;
-      transition: transform .5s, opacity .5s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #385076;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
   }
 
   .navToggle i:nth-child(1) {
-      top: 0;
+    top: 0;
   }
 
   .navToggle i:nth-child(2) {
-      top: 0;
-      bottom: 0;
-      margin: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   .navToggle i:nth-child(3) {
-      bottom: 0;
+    bottom: 0;
   }
 
   .navToggle.show i:nth-child(1) {
@@ -578,11 +610,11 @@ footer .container {
   }
 
   .navToggle.show i:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .navToggle.show i:nth-child(3) {
-      transform: translateY(-12px) rotate(45deg);
+    transform: translateY(-12px) rotate(45deg);
   }
 
   .gnav {
@@ -631,9 +663,29 @@ footer .container {
     width: 100vw;
   }
 
+  #page_top {
+    width: 65px;
+    height: 65px;
+    right: 5%;
+    bottom: 50px;
+  }
+
+  #page_top a {
+    width: 65px;
+    height: 65px;
+  }
+
+  #news {
+    margin-top: 0;
+  }
+
   #music, #live, #about, #contact {
     padding-top: 100px;
     margin-top: -100px;
+  }
+
+  footer {
+    width: 100vw;
   }
 
 
@@ -655,11 +707,6 @@ footer .container {
     top: 70px;
     padding: 20px 7%;
     height: 365px;
-  }
-
-  .gnavMenuList a {
-    padding-top: 70px;
-    margin-top: -70px;
   }
 
   main {
