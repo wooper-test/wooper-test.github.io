@@ -35,13 +35,11 @@ $(function(){
           pagetop.fadeOut();
       }
   });
-  $('a[href^="#"]').click(function(){
-    var time = 500;
-    var href= $(this).attr("href");
-    var target = $(href == "#" ? 'html' : href);
-    var distance = target.offset().top;
-    $("html, body").animate({scrollTop:distance}, time, "swing");
-    return false;
+  pagetop.click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 500); //0.5秒かけてトップへ移動
+      return false;
   });
 
   //musicのアコーディオン
